@@ -3,7 +3,7 @@
         <link rel="stylesheet" :href="cssUrl" data-noprefix />
         <div :class="getTheme">
             <div class="jumbotron jumbotron-fluid" :class="getTheme" ref="jumbotron">
-                <div class="container">
+                <div class="container-fluid">
                     <div class="row">
                         <div class="col">
                             <Editor
@@ -14,7 +14,7 @@
                                 :initialContent="content"
                             />
                         </div>
-                        <div class="col preview" ref="editcol" :class="theme" style="padding: 0px;">
+                        <div class="col preview" ref="editcol" :class="theme" style="padding: 0px; margin-right: 15px">
                             <Preview :content="content"></Preview>
                         </div>
                     </div>
