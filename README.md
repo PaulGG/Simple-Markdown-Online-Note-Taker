@@ -16,3 +16,7 @@ Some features of this markdown viewer:
 - Light/dark theme (dark based off of Dracula)
 
 It is built with VueJS in TypeScript, and uses Vuex for state management. Thank you to open source technology for making this possible.
+
+## Future
+
+Right now it's easy for anyone to just build this and use it as a static site. While the local storage feature in the browser is nice, maybe I will create a different version of this app to be server based so that users can log in, have notes in the 'cloud', and have the ability to download markdown files. Loads of things I could do with this, but for now this is just a simple frontend static webpage note taker.
