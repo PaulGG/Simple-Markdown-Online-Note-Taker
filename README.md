@@ -1,29 +1,18 @@
-# frontend
+# Markdown Note Taker
 
-## Project setup
-```
-npm install
-```
+This is a very simple project that I developed using software I built while developing my blog. 
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+It uses a container-fluid layout to maximize space with editing markdown and previewing, as that is its purpose.
 
-### Compiles and minifies for production
-```
-npm run build
-```
+It also saves user input, so the user can close the browser page and reopen it later (on the same browser), and the content will be there. It is stored in the browser's local storage.
 
-### Run your tests
-```
-npm run test
-```
+Some features of this markdown viewer: 
 
-### Lints and fixes files
-```
-npm run lint
-```
+- Insert emojis like this: :thinking:
+- KaTeX support for fast math rendering, both inline and blocks (\$, \$\$)
+- Syntax highlighting with PrismJS
+- Monaco Editor for actual code editing
+- Fira code with font ligatures
+- Light/dark theme (dark based off of Dracula)
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+It is built with VueJS in TypeScript, and uses Vuex for state management. Thank you to open source technology for making this possible.

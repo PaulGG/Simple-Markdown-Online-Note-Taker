@@ -155,6 +155,18 @@ blockquote:nth-of-type(even) footer:after
   blockquote:nth-of-type(even) 
     padding: 1em 1em 1em 20%
 
+thead
+    background-color: rgba(0,0,0,0.15)
+
+tr:nth-child(even) 
+    background-color: rgba(0,0,0,0.15)
+
+table, th, td
+    border: 1px solid rgba(0,0,0,0.15)
+
+th, td
+    padding: 10px
+
 .editor
     width: 100%
 
