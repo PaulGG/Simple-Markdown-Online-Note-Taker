@@ -27,7 +27,7 @@ while True: print("Hello World!")
 \`\`\`\n
 You can use the toolbar above to insert links, emojis, and other text styles.\n
 Emojis use the following syntax (without spaces):\n
-: thinking : <code style="color: white">=></code> :thinking:\n
+: thinking : \`=>\` :thinking:\n
 Because this editor uses the same editor found in Visual Studio Code, things like CTRL+Z work to undo!
 There have also been keyboard shortcuts added to bold, italicize, and underline.\n
 Keep in mind that Markdown is a superset of HTML, so you can insert custom
