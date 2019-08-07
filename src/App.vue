@@ -7,6 +7,7 @@
                     <div class="row">
                         <div class="col">
                             <Editor
+                                class="editor"
                                 :height="height"
                                 :width="width"
                                 v-model="content"
@@ -14,7 +15,6 @@
                             />
                         </div>
                         <div class="col preview" ref="editcol" :class="theme" style="padding: 0px;">
-                            <!-- <p>Foobar</p> -->
                             <Preview :content="content"></Preview>
                         </div>
                     </div>
@@ -51,12 +51,6 @@ export default class App extends Vue {
     protected width: number | null;
     protected height: number | null;
     protected renderedContent: string;
-    private options = {
-        fontLigatures: true,
-        fontFamily: "Fira Code",
-        wordWrap: true,
-        minimap: { enabled: true }
-    };
     @Getter("getTheme") private getTheme: string;
 
     constructor() {
@@ -160,6 +154,9 @@ blockquote:nth-of-type(even) footer:after
   
   blockquote:nth-of-type(even) 
     padding: 1em 1em 1em 20%
+
+.editor
+    width: 100%
 
 .emoji
     height: 1.2em !important

@@ -1,15 +1,12 @@
 <template>
     <div class="editor">
         <PostToolbar :editor="this.editor" />
-        <div id="monacoeditor"></div>
         <MonacoEditor
             ref="editor"
-            class="editor"
             language="markdown"
             v-model="content"
             :theme="vsTheme"
             :options="options"
-            :width="width"
         />
     </div>
 </template>
@@ -27,7 +24,7 @@ import PostToolbar from "../components/PostToolbar.vue";
     }
 })
 export default class NewPost extends Vue {
-        public $refs: {
+    public $refs: {
         editcol: HTMLDivElement;
         editor: any;
     };
@@ -40,7 +37,7 @@ export default class NewPost extends Vue {
     private options = {
         fontLigatures: true,
         fontFamily: "Fira Code",
-        wordWrap: true,
+        wordWrap: "off",
         minimap: { enabled: false }
     };
 
@@ -56,7 +53,9 @@ export default class NewPost extends Vue {
     public updateDimensions() {
         const height = this.height - 46;
         const width = this.width;
-        this.editor.getEditor().layout({ height, width });
+        if (this.height && this.width) {
+            this.editor.getEditor().layout({ height, width });
+        }
     }
 
     @Watch("width")
@@ -87,7 +86,9 @@ export default class NewPost extends Vue {
         extWindow.monaco.editor.defineTheme("dracula", dracula);
         extWindow.monaco.editor.setTheme(this.vsTheme);
         this.editor = this.$refs.editor;
-        this.updateDimensions();
+        if (this.height && this.width) {
+            this.updateDimensions();
+        }
     }
 
     get theme() {
